@@ -7,7 +7,7 @@ After=network-online.target
 Type=simple
 RuntimeDirectory=elasticsearch
 PrivateTmp=true
-Environment=PID_DIR=/var/run/dynamite/elasticsearch
+Environment=PID_DIR=/var/run/dynamite/
 Environment=ES_SD_NOTIFY=true
 EnvironmentFile=/etc/dynamite/environment
 

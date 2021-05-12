@@ -1313,7 +1313,9 @@ decoder:
   # it will sometimes detect non-teredo as teredo.
   teredo:
     enabled: true
-
+  vxlan:
+    enabled: true
+    ports: 4879
 
 ##
 ## Performance tuning and profiling
