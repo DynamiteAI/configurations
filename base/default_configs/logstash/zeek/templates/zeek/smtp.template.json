@@ -1,0 +1,146 @@
+{
+  "index_patterns": "smtp-events-*",
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "zeek.tls": {
+          "path_match": "zeek.tls",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "zeek.trans_depth": {
+          "path_match": "zeek.trans_depth",
+          "mapping": {
+            "type": "float"
+          }
+        }
+      },
+      {
+        "zeek.uid": {
+          "path_match": "zeek.uid",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "zeek.fuids": {
+          "path_match": "zeek.fuids",
+          "mapping": {
+            "type": "nested"
+          }
+        }
+      },
+      {
+        "zeek.id.orig_p": {
+          "path_match": "zeek.id.orig_p",
+          "mapping": {
+            "type": "float"
+          }
+        }
+      },
+      {
+        "zeek.id.resp_h": {
+          "path_match": "zeek.id.resp_h",
+          "mapping": {
+            "type": "ip"
+          }
+        }
+      },
+      {
+        "zeek.ts": {
+          "path_match": "zeek.ts",
+          "mapping": {
+            "type": "date"
+          }
+        }
+      },
+      {
+        "zeek.last_reply": {
+          "path_match": "zeek.last_reply",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "zeek.id.orig_h": {
+          "path_match": "zeek.id.orig_h",
+          "mapping": {
+            "type": "ip"
+          }
+        }
+      },
+      {
+        "zeek.id.resp_p": {
+          "path_match": "zeek.id.resp_p",
+          "mapping": {
+            "type": "float"
+          }
+        }
+      },
+      {
+        "zeek.is_webmail": {
+          "path_match": "zeek.is_webmail",
+          "mapping": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "zeek.path": {
+          "path_match": "zeek.path",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "zeek.helo": {
+          "path_match": "zeek.helo",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "zeek.community_id": {
+          "path_match": "zeek.community_id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      }
+    ]
+  },
+  "order": 0,
+  "settings": {
+    "index": {
+      "number_of_replicas": 0,
+      "refresh_interval": "10s",
+      "codec": "best_compression",
+      "number_of_shards": 1
+    },
+    "query": {
+      "default_field": [
+        "zeek.tls",
+        "zeek.trans_depth",
+        "zeek.uid",
+        "zeek.fuids",
+        "zeek.id.orig_p",
+        "zeek.id.resp_h",
+        "zeek.ts",
+        "zeek.last_reply",
+        "zeek.id.orig_h",
+        "zeek.id.resp_p",
+        "zeek.is_webmail",
+        "zeek.path",
+        "zeek.helo",
+        "zeek.community_id"
+      ]
+    }
+  }
+}

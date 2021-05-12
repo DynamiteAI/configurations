@@ -1,0 +1,146 @@
+{
+  "index_patterns": "snmp-events-*",
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "zeek.uid": {
+          "path_match": "zeek.uid",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "zeek.id.resp_p": {
+          "path_match": "zeek.id.resp_p",
+          "mapping": {
+            "type": "float"
+          }
+        }
+      },
+      {
+        "zeek.id.orig_p": {
+          "path_match": "zeek.id.orig_p",
+          "mapping": {
+            "type": "float"
+          }
+        }
+      },
+      {
+        "zeek.id.resp_h": {
+          "path_match": "zeek.id.resp_h",
+          "mapping": {
+            "type": "ip"
+          }
+        }
+      },
+      {
+        "zeek.ts": {
+          "path_match": "zeek.ts",
+          "mapping": {
+            "type": "date"
+          }
+        }
+      },
+      {
+        "zeek.community": {
+          "path_match": "zeek.community",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "zeek.id.orig_h": {
+          "path_match": "zeek.id.orig_h",
+          "mapping": {
+            "type": "ip"
+          }
+        }
+      },
+      {
+        "zeek.get_requests": {
+          "path_match": "zeek.get_requests",
+          "mapping": {
+            "type": "float"
+          }
+        }
+      },
+      {
+        "zeek.version": {
+          "path_match": "zeek.version",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "zeek.get_bulk_requests": {
+          "path_match": "zeek.get_bulk_requests",
+          "mapping": {
+            "type": "float"
+          }
+        }
+      },
+      {
+        "zeek.duration": {
+          "path_match": "zeek.duration",
+          "mapping": {
+            "type": "float"
+          }
+        }
+      },
+      {
+        "zeek.get_responses": {
+          "path_match": "zeek.get_responses",
+          "mapping": {
+            "type": "float"
+          }
+        }
+      },
+      {
+        "zeek.set_requests": {
+          "path_match": "zeek.set_requests",
+          "mapping": {
+            "type": "float"
+          }
+        }
+      },
+      {
+        "zeek.community_id": {
+          "path_match": "zeek.community_id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      }
+    ]
+  },
+  "order": 0,
+  "settings": {
+    "index": {
+      "number_of_replicas": 0,
+      "refresh_interval": "10s",
+      "codec": "best_compression",
+      "number_of_shards": 1
+    },
+    "query": {
+      "default_field": [
+        "zeek.uid",
+        "zeek.id.resp_p",
+        "zeek.id.orig_p",
+        "zeek.id.resp_h",
+        "zeek.ts",
+        "zeek.community",
+        "zeek.id.orig_h",
+        "zeek.get_requests",
+        "zeek.version",
+        "zeek.get_bulk_requests",
+        "zeek.duration",
+        "zeek.get_responses",
+        "zeek.set_requests",
+        "zeek.community_id"
+      ]
+    }
+  }
+}

@@ -1,0 +1,461 @@
+{
+  "index_patterns": "zeek-baselines-*",
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "zeek.pcr_dns_max": {
+          "path_match": "zeek.pcr_dns_max", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.out_to_lowports": {
+          "path_match": "zeek.out_to_lowports", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.pcr_http_avg": {
+          "path_match": "zeek.pcr_http_avg", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.pcr_http_max": {
+          "path_match": "zeek.pcr_http_max", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.ext_port_cnt": {
+          "path_match": "zeek.ext_port_cnt", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.pcr_dns_min": {
+          "path_match": "zeek.pcr_dns_min", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.total_conns": {
+          "path_match": "zeek.total_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.out_orig_pkts_sent": {
+          "path_match": "zeek.out_orig_pkts_sent", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.int_orig_pkts_sent": {
+          "path_match": "zeek.int_orig_pkts_sent", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.rdp_client_conns": {
+          "path_match": "zeek.rdp_client_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.int_client_cnt": {
+          "path_match": "zeek.int_client_cnt", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.out_orig_bytes_sent": {
+          "path_match": "zeek.out_orig_bytes_sent", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.endtime": {
+          "path_match": "zeek.endtime", 
+          "mapping": {
+            "type": "date"
+          }
+        }
+      }, 
+      {
+        "zeek.pcr_ssl_avg": {
+          "path_match": "zeek.pcr_ssl_avg", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.int_orig_pkts_recvd": {
+          "path_match": "zeek.int_orig_pkts_recvd", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.int_rej_conns": {
+          "path_match": "zeek.int_rej_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.pcr_ssl_min": {
+          "path_match": "zeek.pcr_ssl_min", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.http_server_conns": {
+          "path_match": "zeek.http_server_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.int_resp_conns": {
+          "path_match": "zeek.int_resp_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.smb_server_conns": {
+          "path_match": "zeek.smb_server_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.pcr_http_min": {
+          "path_match": "zeek.pcr_http_min", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.out_to_highports": {
+          "path_match": "zeek.out_to_highports", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.rdp_server_conns": {
+          "path_match": "zeek.rdp_server_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.ext_host_cnt": {
+          "path_match": "zeek.ext_host_cnt", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.int_to_service": {
+          "path_match": "zeek.int_to_service", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.int_host_cnt": {
+          "path_match": "zeek.int_host_cnt", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.int_port_cnt": {
+          "path_match": "zeek.int_port_cnt", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.int_to_lowports": {
+          "path_match": "zeek.int_to_lowports", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.out_orig_bytes_rcvd": {
+          "path_match": "zeek.out_orig_bytes_rcvd", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.int_to_highports": {
+          "path_match": "zeek.int_to_highports", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.pcr_dns_avg": {
+          "path_match": "zeek.pcr_dns_avg", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.address": {
+          "path_match": "zeek.address", 
+          "mapping": {
+            "type": "ip"
+          }
+        }
+      }, 
+      {
+        "zeek.int_orig_conns": {
+          "path_match": "zeek.int_orig_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.dns_server_conns": {
+          "path_match": "zeek.dns_server_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.smb_client_conns": {
+          "path_match": "zeek.smb_client_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.out_orig_conns": {
+          "path_match": "zeek.out_orig_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.out_to_service": {
+          "path_match": "zeek.out_to_service", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.out_succ_conns": {
+          "path_match": "zeek.out_succ_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.ssl_server_conns": {
+          "path_match": "zeek.ssl_server_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.dns_client_conns": {
+          "path_match": "zeek.dns_client_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.out_orig_pkts_recvd": {
+          "path_match": "zeek.out_orig_pkts_recvd", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.ssl_client_conns": {
+          "path_match": "zeek.ssl_client_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.http_client_conns": {
+          "path_match": "zeek.http_client_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.starttime": {
+          "path_match": "zeek.starttime", 
+          "mapping": {
+            "type": "date"
+          }
+        }
+      }, 
+      {
+        "zeek.out_rej_conns": {
+          "path_match": "zeek.out_rej_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.int_orig_bytes_rcvd": {
+          "path_match": "zeek.int_orig_bytes_rcvd", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.pcr_ssl_max": {
+          "path_match": "zeek.pcr_ssl_max", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.ext_client_cnt": {
+          "path_match": "zeek.ext_client_cnt", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "zeek.int_orig_bytes_sent": {
+          "path_match": "zeek.int_orig_bytes_sent", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }
+    ]
+  }, 
+  "order": 0, 
+  "settings": {
+    "index": {
+      "number_of_replicas": 0,
+      "refresh_interval": "10s",
+      "codec": "best_compression",
+      "number_of_shards": 1
+    }, 
+    "query": {
+      "default_field": [
+        "zeek.pcr_dns_max", 
+        "zeek.out_to_lowports", 
+        "zeek.pcr_http_avg", 
+        "zeek.pcr_http_max", 
+        "zeek.ext_port_cnt", 
+        "zeek.pcr_dns_min", 
+        "zeek.total_conns", 
+        "zeek.out_orig_pkts_sent", 
+        "zeek.int_orig_pkts_sent", 
+        "zeek.rdp_client_conns", 
+        "zeek.int_client_cnt", 
+        "zeek.out_orig_bytes_sent", 
+        "zeek.endtime", 
+        "zeek.pcr_ssl_avg", 
+        "zeek.int_orig_pkts_recvd", 
+        "zeek.int_rej_conns", 
+        "zeek.pcr_ssl_min", 
+        "zeek.http_server_conns", 
+        "zeek.int_resp_conns", 
+        "zeek.smb_server_conns", 
+        "zeek.pcr_http_min", 
+        "zeek.out_to_highports", 
+        "zeek.rdp_server_conns", 
+        "zeek.ext_host_cnt", 
+        "zeek.int_to_service", 
+        "zeek.int_host_cnt", 
+        "zeek.int_port_cnt", 
+        "zeek.int_to_lowports", 
+        "zeek.out_orig_bytes_rcvd", 
+        "zeek.int_to_highports", 
+        "zeek.pcr_dns_avg", 
+        "zeek.address", 
+        "zeek.int_orig_conns", 
+        "zeek.dns_server_conns", 
+        "zeek.smb_client_conns", 
+        "zeek.out_orig_conns", 
+        "zeek.out_to_service", 
+        "zeek.out_succ_conns", 
+        "zeek.ssl_server_conns", 
+        "zeek.dns_client_conns", 
+        "zeek.out_orig_pkts_recvd", 
+        "zeek.ssl_client_conns", 
+        "zeek.http_client_conns", 
+        "zeek.starttime", 
+        "zeek.out_rej_conns", 
+        "zeek.int_orig_bytes_rcvd", 
+        "zeek.pcr_ssl_max", 
+        "zeek.ext_client_cnt", 
+        "zeek.int_orig_bytes_sent"
+      ]
+    }
+  }
+}

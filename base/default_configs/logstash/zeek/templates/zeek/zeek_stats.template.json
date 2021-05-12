@@ -1,0 +1,227 @@
+{
+  "index_patterns": "zeek_stats-*", 
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "stats.active_dns_requests": {
+          "path_match": "stats.active_dns_requests", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "stats.reassem_tcp_size": {
+          "path_match": "stats.reassem_tcp_size", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "stats.events_queued": {
+          "path_match": "stats.events_queued", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "stats.icmp_conns": {
+          "path_match": "stats.icmp_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "stats.events_proc": {
+          "path_match": "stats.events_proc", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "stats.bytes_recv": {
+          "path_match": "stats.bytes_recv", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "stats.reassem_file_size": {
+          "path_match": "stats.reassem_file_size", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "stats.ts": {
+          "path_match": "stats.ts", 
+          "mapping": {
+            "type": "date"
+          }
+        }
+      }, 
+      {
+        "stats.reassem_frag_size": {
+          "path_match": "stats.reassem_frag_size", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "stats.active_icmp_conns": {
+          "path_match": "stats.active_icmp_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "stats.active_timers": {
+          "path_match": "stats.active_timers", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "stats.files": {
+          "path_match": "stats.files", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "stats.mem": {
+          "path_match": "stats.mem", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "stats.pkts_proc": {
+          "path_match": "stats.pkts_proc", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "stats.active_tcp_conns": {
+          "path_match": "stats.active_tcp_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "stats.peer": {
+          "path_match": "stats.peer", 
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      }, 
+      {
+        "stats.tcp_conns": {
+          "path_match": "stats.tcp_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "stats.reassem_unknown_size": {
+          "path_match": "stats.reassem_unknown_size", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "stats.udp_conns": {
+          "path_match": "stats.udp_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "stats.timers": {
+          "path_match": "stats.timers", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "stats.active_files": {
+          "path_match": "stats.active_files", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "stats.active_udp_conns": {
+          "path_match": "stats.active_udp_conns", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }, 
+      {
+        "stats.dns_requests": {
+          "path_match": "stats.dns_requests", 
+          "mapping": {
+            "type": "float"
+          }
+        }
+      }
+    ]
+  }, 
+  "order": 0, 
+  "settings": {
+    "index": {
+      "number_of_replicas": 0,
+      "refresh_interval": "10s",
+      "codec": "best_compression",
+      "number_of_shards": 1
+    }, 
+    "query": {
+      "default_field": [
+        "stats.active_dns_requests", 
+        "stats.reassem_tcp_size", 
+        "stats.events_queued", 
+        "stats.icmp_conns", 
+        "stats.events_proc", 
+        "stats.bytes_recv", 
+        "stats.reassem_file_size", 
+        "stats.ts", 
+        "stats.reassem_frag_size", 
+        "stats.active_icmp_conns", 
+        "stats.active_timers", 
+        "stats.files", 
+        "stats.mem", 
+        "stats.pkts_proc", 
+        "stats.active_tcp_conns", 
+        "stats.peer", 
+        "stats.tcp_conns", 
+        "stats.reassem_unknown_size", 
+        "stats.udp_conns", 
+        "stats.timers", 
+        "stats.active_files", 
+        "stats.active_udp_conns", 
+        "stats.dns_requests"
+      ]
+    }
+  }
+}

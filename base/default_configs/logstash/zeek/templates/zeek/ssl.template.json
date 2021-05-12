@@ -1,0 +1,137 @@
+{
+  "index_patterns": "ssl-events-*",
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "zeek.resumed": {
+          "path_match": "zeek.resumed",
+          "mapping": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "zeek.established": {
+          "path_match": "zeek.established",
+          "mapping": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "zeek.uid": {
+          "path_match": "zeek.uid",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "zeek.server_name": {
+          "path_match": "zeek.server_name",
+          "mapping": {
+            "type": "text"
+          }
+        }
+      },
+      {
+        "zeek.id.orig_p": {
+          "path_match": "zeek.id.orig_p",
+          "mapping": {
+            "type": "float"
+          }
+        }
+      },
+      {
+        "zeek.id.resp_h": {
+          "path_match": "zeek.id.resp_h",
+          "mapping": {
+            "type": "ip"
+          }
+        }
+      },
+      {
+        "zeek.curve": {
+          "path_match": "zeek.curve",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "zeek.ts": {
+          "path_match": "zeek.ts",
+          "mapping": {
+            "type": "date"
+          }
+        }
+      },
+      {
+        "zeek.id.orig_h": {
+          "path_match": "zeek.id.orig_h",
+          "mapping": {
+            "type": "ip"
+          }
+        }
+      },
+      {
+        "zeek.id.resp_p": {
+          "path_match": "zeek.id.resp_p",
+          "mapping": {
+            "type": "float"
+          }
+        }
+      },
+      {
+        "zeek.cipher": {
+          "path_match": "zeek.cipher",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "zeek.version": {
+          "path_match": "zeek.version",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "zeek.community_id": {
+          "path_match": "zeek.community_id",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      }
+    ]
+  },
+  "order": 0,
+  "settings": {
+    "index": {
+      "number_of_replicas": 0,
+      "refresh_interval": "10s",
+      "codec": "best_compression",
+      "number_of_shards": 1
+    },
+    "query": {
+      "default_field": [
+        "zeek.resumed",
+        "zeek.established",
+        "zeek.uid",
+        "zeek.server_name",
+        "zeek.id.orig_p",
+        "zeek.id.resp_h",
+        "zeek.curve",
+        "zeek.ts",
+        "zeek.id.orig_h",
+        "zeek.id.resp_p",
+        "zeek.cipher",
+        "zeek.version",
+        "zeek.community_id"
+      ]
+    }
+  }
+}
