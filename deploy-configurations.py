@@ -241,6 +241,7 @@ if __name__ == '__main__':
                 break
             elif str(res).strip() == "y":
                 break
+
     existing_versions_in_s3 = list_dynamite_config_versions_s3()
     if args.version in existing_versions_in_s3 and not args.overwrite:
         print('Version {} already exists in {}. Use the --overwrite flag to overwrite {}'.format(args.version,
