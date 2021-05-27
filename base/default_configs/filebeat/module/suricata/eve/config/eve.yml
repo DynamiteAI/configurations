@@ -8,6 +8,10 @@ tags: {{.tags | tojson}}
 publisher_pipeline.disable_host: {{ inList .tags "forwarded" }}
 
 processors:
+  - drop_event:
+      when:
+        contains: 
+          message: "stats"
   - rename:
       fields:
         - {from: message, to: event.original}
@@ -39,6 +43,7 @@ processors:
         - '2006-01-02T15:04:05.999999999Z0700' # ISO8601
   - drop_fields:
       fields:
+        - event.original
         - suricata.eve.timestamp
 {{ if .community_id }}
   - community_id:
