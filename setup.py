@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='dynamite-nsm-public-configurations',
-    version='0.1',
+    version='1.0',
     url='http://dynamite.ai',
     license='',
     author='Jamin Becker',
