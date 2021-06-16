@@ -48,10 +48,6 @@ processors:
       originating_agent_tag: dynamite_nsm_agent
 setup.kibana:
   enabled: false
-  host: localhost:5601
-  protocol: http
 setup.template:
   enabled: true
   overwrite: true
-  name: events
-  pattern: filebeat-*
