@@ -1587,7 +1587,7 @@ rule-files:
   - botcc.portgrouped.rules
   - ciarmy.rules
   - compromised.rules
-  - drop.rules
+#  - drop.rules
   - dshield.rules
 # - emerging-activex.rules
   - emerging-attack_response.rules
@@ -1609,20 +1609,20 @@ rule-files:
   - emerging-netbios.rules
   - emerging-p2p.rules
   - emerging-policy.rules
-  - emerging-pop3.rules
+# - emerging-pop3.rules
   - emerging-rpc.rules
 # - emerging-scada.rules
 # - emerging-scada_special.rules
- #- emerging-scan.rules
+# - emerging-scan.rules
 # - emerging-shellcode.rules
   - emerging-smtp.rules
   - emerging-snmp.rules
   - emerging-sql.rules
-  - emerging-telnet.rules
-  - emerging-tftp.rules
+# - emerging-telnet.rules
+# - emerging-tftp.rules
   - emerging-trojan.rules
   - emerging-user_agents.rules
-  - emerging-voip.rules
+# - emerging-voip.rules
   - emerging-web_client.rules
   - emerging-web_server.rules
 # - emerging-web_specific_apps.rules
@@ -1630,10 +1630,10 @@ rule-files:
   - tor.rules
 # - decoder-events.rules # available in suricata sources under rules dir
 # - stream-events.rules  # available in suricata sources under rules dir
-  - http-events.rules    # available in suricata sources under rules dir
-  - smtp-events.rules    # available in suricata sources under rules dir
-  - dns-events.rules     # available in suricata sources under rules dir
-  - tls-events.rules     # available in suricata sources under rules dir
+#  - http-events.rules    # available in suricata sources under rules dir
+#  - smtp-events.rules    # available in suricata sources under rules dir
+#  - dns-events.rules     # available in suricata sources under rules dir
+#  - tls-events.rules     # available in suricata sources under rules dir
 # - modbus-events.rules  # available in suricata sources under rules dir
 # - app-layer-events.rules  # available in suricata sources under rules dir
 # - dnp3-events.rules       # available in suricata sources under rules dir
