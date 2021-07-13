@@ -47,7 +47,7 @@ vars:
 # The default logging directory.  Any log or output file will be
 # placed here if its not specified with a full path name. This can be
 # overridden with the -l command line parameter.
-default-log-dir: /var/dynamite/suricata/log/suricata/
+default-log-dir: /opt/dynamite/suricata/logs/
 
 # global stats configuration
 stats:
@@ -592,7 +592,7 @@ logging:
   - file:
       enabled: yes
       level: info
-      filename: /var/log/dynamite/suricata/suricata.log
+      filename: suricata.log
       type: json
   - syslog:
       enabled: no
