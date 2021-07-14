@@ -544,11 +544,11 @@ pcap-file:
 app-layer:
   protocols:
     krb5:
-      enabled: no
+      enabled: yes
     ikev2:
-      enabled: no
+      enabled: yes
     tls:
-      enabled: no
+      enabled: yes
       detection-ports:
         dp: 443
 
@@ -570,14 +570,14 @@ app-layer:
       #encryption-handling: default
 
     dcerpc:
-      enabled: no
+      enabled: yes
     ftp:
-      enabled: no
+      enabled: yes
       # memcap: 64mb
     ssh:
-      enabled: no
+      enabled: yes
     smtp:
-      enabled: no
+      enabled: yes
       # Configure SMTP-MIME Decoder
       mime:
         # Decode MIME messages from SMTP transactions
@@ -611,7 +611,7 @@ app-layer:
     # Note: --enable-rust is required for full SMB1/2 support. W/o rust
     # only minimal SMB1 support is available.
     smb:
-      enabled: no
+      enabled: yes
       detection-ports:
         dp: 139, 445
 
@@ -621,9 +621,9 @@ app-layer:
     # Note: NFS parser depends on Rust support: pass --enable-rust
     # to configure.
     nfs:
-      enabled: no
+      enabled: yes
     tftp:
-      enabled: no
+      enabled: yes
     dns:
       # memcaps. Globally and per flow/state.
       #global-memcap: 16mb
@@ -634,15 +634,15 @@ app-layer:
       #request-flood: 500
 
       tcp:
-        enabled: no
+        enabled: yes
         detection-ports:
           dp: 53
       udp:
-        enabled: no
+        enabled: yes
         detection-ports:
           dp: 53
     http:
-      enabled: no
+      enabled: yes
       # memcap: 64mb
 
       # default-config:           Used when no server-config matches
@@ -783,23 +783,23 @@ app-layer:
 
     # DNP3
     dnp3:
-      enabled: no
+      enabled: yes
       detection-ports:
         dp: 20000
 
     # SCADA EtherNet/IP and CIP protocol support
     enip:
-      enabled: no
+      enabled: yes
       detection-ports:
         dp: 44818
         sp: 44818
 
     # Note: parser depends on Rust support
     ntp:
-      enabled: no
+      enabled: yes
 
     dhcp:
-      enabled: no
+      enabled: yes
 
 # Limit for the maximum number of asn1 frames to decode (default 256)
 asn1-max-frames: 256
