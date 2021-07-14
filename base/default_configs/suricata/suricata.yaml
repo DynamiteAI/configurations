@@ -132,6 +132,7 @@ outputs:
 
       types:
         - alert:
+            enabled: yes
             # payload: yes             # enable dumping payload in Base64
             # payload-buffer-size: 4kb # max size of payload buffer to output in eve-log
             # payload-printable: yes   # enable dumping payload in printable (lossy) format
@@ -143,6 +144,94 @@ outputs:
             # Enable the logging of tagged packets for rules using the
             # "tag" keyword.
             tagged-packets: yes
+        - http:
+            extended: yes     # enable this for extended logging information
+            enabled: no
+            # custom allows additional http fields to be included in eve-log
+            # the example below adds three additional fields when uncommented
+            #custom: [Accept-Encoding, Accept-Language, Authorization]
+        - dns:
+            # Use version 2 logging with the new format:
+            # dns answers will be logged in one single event
+            # rather than an event for each of the answers.
+            # Without setting a version the version
+            # will fallback to 1 for backwards compatibility.
+            enabled: no
+            version: 2
+
+            # Enable/disable this logger. Default: enabled.
+            #enabled: no
+
+            # Control logging of requests and responses:
+            # - requests: enable logging of DNS queries
+            # - responses: enable logging of DNS answers
+            # By default both requests and responses are logged.
+            #requests: no
+            #responses: no
+
+            # Format of answer logging:
+            # - detailed: array item per answer
+            # - grouped: answers aggregated by type
+            # Default: all
+            #answer-format: [detailed, grouped]
+
+            # Answer types to log.
+            # Default: all
+            #answer-types: [a, aaaa, cname, mx, ns, ptr, txt]
+        - tls:
+            enabled: no
+            extended: yes     # enable this for extended logging information
+            # output TLS transaction where the session is resumed using a
+            # session id
+            #session-resumption: no
+            # custom allows to control which tls fields that are included
+            # in eve-log
+            #custom: [subject, issuer, session_resumed, serial, fingerprint, sni, version, not_before, not_after, certificate, chain]
+        - files:
+            enabled: no
+            force-magic: no   # force logging magic on all logged files
+            # force logging of checksums, available hash functions are md5,
+            # sha1 and sha256
+            #force-hash: [md5]
+        #- drop:
+        #    alerts: yes      # log alerts that caused drops
+        #    flows: all       # start or all: 'start' logs only a single drop
+        #                     # per flow direction. All logs each dropped pkt.
+        - smtp:
+            enabled: no
+            #extended: yes # enable this for extended logging information
+            # this includes: bcc, message-id, subject, x_mailer, user-agent
+            # custom fields logging from the list:
+            #  reply-to, bcc, message-id, subject, x-mailer, user-agent, received,
+            #  x-originating-ip, in-reply-to, references, importance, priority,
+            #  sensitivity, organization, content-md5, date
+            #custom: [received, x-mailer, x-originating-ip, relays, reply-to, bcc]
+            # output md5 of fields: body, subject
+            # for the body you need to set app-layer.protocols.smtp.mime.body-md5
+            # to yes
+            #md5: [body, subject]
+
+        # NFS logging. Requires Rust.
+        - nfs:
+            enabled: no
+        # IKEv2 logging. Requires Rust.
+        - ikev2:
+            enabled: no
+        - ssh:
+            enabled: no
+        - stats:
+            enabled: no
+            totals: no       # stats for all threads merged together
+            threads: no       # per thread stats
+            deltas: no        # include delta values
+        - dhcp:
+            # DHCP logging requires Rust.
+            enabled: no
+            # When extended mode is on, all DHCP messages are logged
+            # with full detail. When extended mode is off (the
+            # default), just enough information to map a MAC address
+            # to an IP address is logged.
+            extended: no
 
   # alert output for use with Barnyard2
   - unified2-alert:
@@ -544,11 +633,11 @@ pcap-file:
 app-layer:
   protocols:
     krb5:
-      enabled: no
+      enabled: yes
     ikev2:
-      enabled: no
+      enabled: yes
     tls:
-      enabled: no
+      enabled: yes
       detection-ports:
         dp: 443
 
@@ -570,14 +659,14 @@ app-layer:
       #encryption-handling: default
 
     dcerpc:
-      enabled: no
+      enabled: yes
     ftp:
-      enabled: no
+      enabled: yes
       # memcap: 64mb
     ssh:
-      enabled: no
+      enabled: yes
     smtp:
-      enabled: no
+      enabled: yes
       # Configure SMTP-MIME Decoder
       mime:
         # Decode MIME messages from SMTP transactions
@@ -611,7 +700,7 @@ app-layer:
     # Note: --enable-rust is required for full SMB1/2 support. W/o rust
     # only minimal SMB1 support is available.
     smb:
-      enabled: no
+      enabled: yes
       detection-ports:
         dp: 139, 445
 
@@ -621,9 +710,9 @@ app-layer:
     # Note: NFS parser depends on Rust support: pass --enable-rust
     # to configure.
     nfs:
-      enabled: no
+      enabled: yes
     tftp:
-      enabled: no
+      enabled: yes
     dns:
       # memcaps. Globally and per flow/state.
       #global-memcap: 16mb
@@ -634,15 +723,15 @@ app-layer:
       #request-flood: 500
 
       tcp:
-        enabled: no
+        enabled: yes
         detection-ports:
           dp: 53
       udp:
-        enabled: no
+        enabled: yes
         detection-ports:
           dp: 53
     http:
-      enabled: no
+      enabled: yes
       # memcap: 64mb
 
       # default-config:           Used when no server-config matches
@@ -783,23 +872,23 @@ app-layer:
 
     # DNP3
     dnp3:
-      enabled: no
+      enabled: yes
       detection-ports:
         dp: 20000
 
     # SCADA EtherNet/IP and CIP protocol support
     enip:
-      enabled: no
+      enabled: yes
       detection-ports:
         dp: 44818
         sp: 44818
 
     # Note: parser depends on Rust support
     ntp:
-      enabled: no
+      enabled: yes
 
     dhcp:
-      enabled: no
+      enabled: yes
 
 # Limit for the maximum number of asn1 frames to decode (default 256)
 asn1-max-frames: 256
@@ -892,7 +981,7 @@ runmode: autofp
 # activated in live capture mode. You can use the filename variable to set
 # the file name of the socket.
 unix-command:
-  enabled: auto
+  enabled: no
   #filename: custom.socket
 
 # Magic file. The extension .mgc is added to the value here.
@@ -1400,5 +1489,3 @@ rule-files:
 
 classification-file: /etc/dynamite/suricata/rules/classification.config
 reference-config-file: /etc/dynamite/suricata/reference.config
-
-
