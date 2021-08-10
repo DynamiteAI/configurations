@@ -96,4 +96,3 @@
 
 redef ignore_checksums = T;
 redef Stats::report_interval = 1 mins;
-redef Netbase::obs_interval = 5 mins;
