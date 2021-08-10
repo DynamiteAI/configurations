@@ -109,7 +109,7 @@ export {
     ## will be monitored in addition to those that match the monitoring mode. 
     ## Values are of type subnet but individual IP addresses can be 
     ## defined using a /32 mask: ex. 192.168.10.1/32   
-    global critical_assets: set[subnet] &default=set() &redef;
+    global critical_assets: set[subnet] &redef;
 
     ## Enum that defines the available monitoring modes.  Observations will be made and 
     ## logged for IP's that match this type.
@@ -303,7 +303,7 @@ event Netbase::add_observables(ip: addr, obs: set[observable]) &priority=100
 @endif
 
 # Create the log stream 
-event bro_init()
+event zeek_init()
     {
     Log::create_stream(Netbase::LOG, [$columns=observation, $ev=Netbase::write_obs_log, $path="netbase"]);
     }

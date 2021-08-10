@@ -45,7 +45,7 @@ event get_stats()
     @endif
     }
 
-event bro_init()
+event zeek_init()
 	{
 	event get_stats();
 	Log::create_stream(Netbase_stats::LOG, [$columns=stat_info, $ev=log_stats, $path="netbase_stats"]);
