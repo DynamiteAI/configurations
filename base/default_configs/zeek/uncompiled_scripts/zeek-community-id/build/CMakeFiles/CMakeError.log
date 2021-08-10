@@ -1,0 +1,23 @@
+Performing C++ SOURCE FILE Test cxx17_already_works failed with the following output:
+Change Dir: /tmp/dynamite/install_cache/configurations/base/default_configs/zeek/uncompiled_scripts/zeek-community-id-3.2.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_bd0b6/fast && /usr/bin/make -f CMakeFiles/cmTC_bd0b6.dir/build.make CMakeFiles/cmTC_bd0b6.dir/build
+make[1]: Entering directory '/tmp/dynamite/install_cache/configurations/base/default_configs/zeek/uncompiled_scripts/zeek-community-id-3.2.1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_bd0b6.dir/src.cxx.o
+/usr/bin/c++    -Dcxx17_already_works   -o CMakeFiles/cmTC_bd0b6.dir/src.cxx.o -c /tmp/dynamite/install_cache/configurations/base/default_configs/zeek/uncompiled_scripts/zeek-community-id-3.2.1/build/CMakeFiles/CMakeTmp/src.cxx
+/tmp/dynamite/install_cache/configurations/base/default_configs/zeek/uncompiled_scripts/zeek-community-id-3.2.1/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/tmp/dynamite/install_cache/configurations/base/default_configs/zeek/uncompiled_scripts/zeek-community-id-3.2.1/build/CMakeFiles/CMakeTmp/src.cxx:2:24: error: ‘optional’ is not a member of ‘std’
+    2 |      int main() { std::optional<int> a; }
+      |                        ^~~~~~~~
+/tmp/dynamite/install_cache/configurations/base/default_configs/zeek/uncompiled_scripts/zeek-community-id-3.2.1/build/CMakeFiles/CMakeTmp/src.cxx:2:24: note: ‘std::optional’ is only available from C++17 onwards
+/tmp/dynamite/install_cache/configurations/base/default_configs/zeek/uncompiled_scripts/zeek-community-id-3.2.1/build/CMakeFiles/CMakeTmp/src.cxx:2:33: error: expected primary-expression before ‘int’
+    2 |      int main() { std::optional<int> a; }
+      |                                 ^~~
+make[1]: *** [CMakeFiles/cmTC_bd0b6.dir/build.make:66: CMakeFiles/cmTC_bd0b6.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/tmp/dynamite/install_cache/configurations/base/default_configs/zeek/uncompiled_scripts/zeek-community-id-3.2.1/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_bd0b6/fast] Error 2
+
+
+Source file was:
+#include <optional>
+     int main() { std::optional<int> a; }

@@ -1,0 +1,8 @@
+# Hashes of file build rules.
+0e36aa258f1d8e1897210c0aabb37a0b CMakeFiles/bif-init-Corelight_CommunityID
+aa4c08b213ab8e6c9ced0dfb03aca541 CMakeFiles/bif-plugin-Corelight_CommunityID-communityid.bif
+dce6e3f322cd78d9b7ce041c32468808 CMakeFiles/bro-plugin-Corelight_CommunityID
+b359edfb26b84f04c3d9a2d676cca04d CMakeFiles/copy-scripts-Corelight_CommunityID
+aa4c08b213ab8e6c9ced0dfb03aca541 CMakeFiles/dist
+0f1cf31edbdb5e133456e8a94f8d4574 Corelight_CommunityID.tgz
+12573c08346ca4f24547088e3585d304 communityid.bif.h

@@ -1,0 +1,2 @@
+# This is the command used to configure this build
+./configure --zeek-dist=/tmp/dynamite/install_cache/zeek-4.0.3 --install-root=/etc/dynamite/zeek
