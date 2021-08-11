@@ -1,1 +1,0 @@
-@load ./communityid.bif.zeek

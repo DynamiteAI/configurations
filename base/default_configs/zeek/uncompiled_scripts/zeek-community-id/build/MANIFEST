@@ -1,7 +1,0 @@
-Corelight_CommunityID/__bro_plugin__
-Corelight_CommunityID/lib/bif/__load__.zeek
-Corelight_CommunityID/lib/bif/communityid.bif.zeek
-Corelight_CommunityID/lib/Corelight-CommunityID.linux-x86_64.so
-Corelight_CommunityID/README
-Corelight_CommunityID/COPYING
-Corelight_CommunityID/VERSION
