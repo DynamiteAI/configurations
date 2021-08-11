@@ -6,7 +6,7 @@ PartOf=dynamite-agent.target
 [Service]
 EnvironmentFile=/etc/dynamite/environment
 # Find the python2 binary
-Environment="PYTHON_BIN=`whereis python | tr ' ' '\n' | grep -v config | grep -v 3 | sed -n '2p'`"
+Environment="PYTHON_BIN=/usr/bin/python3"
 ExecStartPre=/bin/bash -c "${PYTHON_BIN} ${ZEEK_HOME}/bin/zeekctl cleanup"
 ExecStartPre=/bin/bash -c "${PYTHON_BIN} ${ZEEK_HOME}/bin/zeekctl check"
 ExecStartPre=/bin/bash -c "${PYTHON_BIN} ${ZEEK_HOME}/bin/zeekctl install"
