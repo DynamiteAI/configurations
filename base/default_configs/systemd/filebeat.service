@@ -5,6 +5,8 @@ After=network-online.target
 PartOf=dynamite-agent.target
 
 [Service]
+User=dynamite
+Group=dynamite
 EnvironmentFile=/etc/dynamite/environment
 Environment=PIDFILE=/var/run/dynamite/filebeat/filebeat.pid
 PIDFile=/var/run/dynamite/filebeat/filebeat.pid
