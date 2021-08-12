@@ -87,10 +87,6 @@
 # @load frameworks/files/extract-all-files
 @load frameworks/files/hash-all-files
 
-# Plugins
-@load Corelight/CommunityID
-@load Zeek_AF_Packet/scripts
-
 # Notice Framework
 # @load policy/frameworks/notice/extend-email/hostnames
 
