@@ -90,5 +90,6 @@
 # Notice Framework
 # @load policy/frameworks/notice/extend-email/hostnames
 
+@load packages
 redef ignore_checksums = T;
 redef Stats::report_interval = 1 mins;
