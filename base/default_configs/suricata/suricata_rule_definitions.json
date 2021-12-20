@@ -1,0 +1,256 @@
+{
+ "6923": {
+  "friendly_name": "Attack/Response Traffic",
+  "description": "Responses indicative of intrusion\u2014LMHost file download, certain banners, Metasploit Meterpreter kill command detected, etc.",
+  "categories": [
+   "alerts"
+  ]
+ },
+ "8213": {
+  "friendly_name": "Bot Command and Control",
+  "description": "These are auto-generated from several sources of known and confirmed active Botnet and other Command and Control hosts. Updated daily, primary data source is Shadowserver.org.",
+  "categories": [
+   "alerts",
+   "auto-generated"
+  ]
+ },
+ "9254": {
+  "friendly_name": "Bot Command and Control (Port Grouped)",
+  "description": "These are auto-generated from several sources of known and confirmed active Botnet and other Command and Control hosts. Updated daily, primary data source is Shadowserver.org. This set is grouped by destination-port.",
+  "categories": [
+   "alerts",
+   "auto-generated"
+  ]
+ },
+ "2005": {
+  "friendly_name": "Chat",
+  "description": "Identification of traffic related to numerous chat clients, irc, and possible check-in activity",
+  "categories": [
+   "alerts"
+  ]
+ },
+ "12647": {
+  "friendly_name": "CIArmy",
+  "description": "Collective Intelligence generated IP rules for blocking based upon cinsscore.com.",
+  "categories": [
+   "alerts",
+   "threat-community"
+  ]
+ },
+ "11428": {
+  "friendly_name": "Current Events",
+  "description": "Active and short lived campaigns. This category covers exploit kits and malware that will be aged and removed quickly due to the short lived nature of the threat.",
+  "categories": [
+   "alerts",
+   "threat-community"
+  ]
+ },
+ "2857": {
+  "friendly_name": "Suspicious DNS Behavior",
+  "description": "Rules for attacks and vulnerabilities regarding DNS. Also category for abuse of the service for things such as tunneling.",
+  "categories": [
+   "alerts"
+  ]
+ },
+ "147": {
+  "friendly_name": "Denial of Service",
+  "description": "Denial of Service attempt detection. Intended to catch inbound DOS activity, and outbound indications.",
+  "categories": [
+   "alerts"
+  ]
+ },
+ "14175": {
+  "friendly_name": "DShield",
+  "description": "IP based rules for Dshield Identified attackers. Daily updated list of the DShield top attackers list.",
+  "categories": [
+   "alerts",
+   "threat-community"
+  ]
+ },
+ "8970": {
+  "friendly_name": "Generic Exploits",
+  "description": "Exploits that are not covered in specific service category. Rules to detect direct exploits.",
+  "categories": [
+   "alerts"
+  ]
+ },
+ "9983": {
+  "friendly_name": "Suspicious FTP Behavior",
+  "description": "Rules for attacks, exploits, and vulnerabilities regarding FTP. Also includes basic none malicious FTP activity for logging purposes, such as login, etc.",
+  "categories": [
+   "alerts"
+  ]
+ },
+ "4108": {
+  "friendly_name": "Normal HTTP Behavior",
+  "description": "Rules to log HTTP protocol specific events, typically normal operation.",
+  "categories": [
+   "events"
+  ]
+ },
+ "8284": {
+  "friendly_name": "Suspicious IMAP Behavior",
+  "description": "Rules for the identification, as well as attacks and vulnerabilities regarding the IMAP protocol. ",
+  "categories": [
+   "alerts",
+   "events"
+  ]
+ },
+ "11902": {
+  "friendly_name": "General Malware/Spyware",
+  "description": "Malware and Spyware related, no clear criminal intent.",
+  "categories": [
+   "alerts"
+  ]
+ },
+ "11709": {
+  "friendly_name": "Mobile Malware/Spyware",
+  "description": "Specific to mobile platforms: Malware and Spyware related, no clear criminal intent.",
+  "categories": [
+   "alerts"
+  ]
+ },
+ "2473": {
+  "friendly_name": "Suspicious Netbios Behavior",
+  "description": "Rules for the identification, as well as attacks, exploits and vulnerabilities regarding Netbios. Also included are rules detecting basic activity of the protocol for logging purposes.",
+  "categories": [
+   "alerts",
+   "events"
+  ]
+ },
+ "159": {
+  "friendly_name": "Peer-to-Peer Identification",
+  "description": "Rules for the identification of Peer-to-Peer traffic and attacks against. Including torrents, edonkey, Bittorrent, Gnutella, Limewire, etc.",
+  "categories": [
+   "identifications"
+  ]
+ },
+ "8709": {
+  "friendly_name": "Application Identification",
+  "description": "Application Identification category. Includes signatures for applications like DropBox and Google Apps, etc. Also covers off port protocols, basic DLP such as credit card numbers and social security numbers.",
+  "categories": [
+   "identifications"
+  ]
+ },
+ "10863": {
+  "friendly_name": "Suspicious POP3 Behavior",
+  "description": "Rules for the identification, as well as attacks and vulnerabilities regarding the POP3 protocol. Also included are rules detecting basic activity of the protocol for logging purposes.",
+  "categories": [
+   "events"
+  ]
+ },
+ "1938": {
+  "friendly_name": "Suspicious RPC Behavior",
+  "description": "RPC related attacks, vulnerabilities, and protocol detection. Also included are rules detecting basic activity of the protocol for logging purposes.",
+  "categories": [
+   "alerts",
+   "events"
+  ]
+ },
+ "8385": {
+  "friendly_name": "Suspicious SMTP Traffic",
+  "description": "Rules for attacks, exploits, and vulnerabilities regarding SMTP. Also included are rules detecting basic activity of the protocol for logging purposes.",
+  "categories": [
+   "alerts",
+   "events"
+  ]
+ },
+ "14312": {
+  "friendly_name": "SMTP Operations",
+  "description": "Rules that will log SMTP operations.",
+  "categories": [
+   "events"
+  ]
+ },
+ "3187": {
+  "friendly_name": "Suspicious SNMP Behavior",
+  "description": "Rules for attacks, exploits, and vulnerabilities regarding SNMP. Also included are rules detecting basic activity of the protocol for logging purposes.",
+  "categories": [
+   "alerts",
+   "events"
+  ]
+ },
+ "9829": {
+  "friendly_name": "Suspicious SQL Behavior",
+  "description": "Rules for attacks, exploits, and vulnerabilities regarding SQL. Also included are rules detecting basic activity of the protocol for logging purposes.",
+  "categories": [
+   "alerts",
+   "events"
+  ]
+ },
+ "4409": {
+  "friendly_name": "Suspicious Telnet Behavior",
+  "description": "Rules for attacks and vulnerabilities regarding the TELNET service. Also included are rules detecting basic activity of the protocol for logging purposes.",
+  "categories": [
+   "alerts",
+   "events"
+  ]
+ },
+ "14971": {
+  "friendly_name": "Suspicious TFTP Behavior",
+  "description": "Rules for attacks and vulnerabilities regarding the TFTP service. Also included are rules detecting basic activity of the protocol for logging purposes.",
+  "categories": [
+   "alerts",
+   "events"
+  ]
+ },
+ "9007": {
+  "friendly_name": "Suspicious TLS Behavior",
+  "description": "Rules for matching on TLS events and anomalies.",
+  "categories": [
+   "alerts",
+   "events"
+  ]
+ },
+ "6927": {
+  "friendly_name": "TOR Traffic Identification",
+  "description": "IP Based rules for the identification of traffic to and from TOR exit nodes.",
+  "categories": [
+   "alerts",
+   "identifications",
+   "threat-community"
+  ]
+ },
+ "8179": {
+  "friendly_name": "Trojan Traffic",
+  "description": "Malicious software that has clear criminal intent. Rules here detect malicious software that is in transit, active, infecting, attacking, updating, and whatever else we can detect on the wire.",
+  "categories": [
+   "alerts"
+  ]
+ },
+ "4933": {
+  "friendly_name": "User Agent Identification",
+  "description": "User agent identification and detection.",
+  "categories": [
+   "identifications"
+  ]
+ },
+ "11939": {
+  "friendly_name": "Suspicious VOIP Behavior",
+  "description": "Rules for attacks and vulnerabilities regarding the VOIP environment.",
+  "categories": [
+   "alerts"
+  ]
+ },
+ "13217": {
+  "friendly_name": "Suspicious Client-side Behavior",
+  "description": "Web client side attacks and vulnerabilities.",
+  "categories": [
+   "alerts"
+  ]
+ },
+ "4033": {
+  "friendly_name": "Suspicious Server-side Behavior",
+  "description": "Rules for attacks and vulnerabilities against web servers.",
+  "categories": [
+   "alerts"
+  ]
+ },
+ "4642": {
+  "friendly_name": "Worm Traffic",
+  "description": "Traffic indicative of network based worm activity.",
+  "categories": [
+   "alerts"
+  ]
+ }
+}

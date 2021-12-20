@@ -1202,7 +1202,7 @@ decoder:
     enabled: true
   vxlan:
     enabled: true
-    ports: 4879
+    ports: 4789
 
 ##
 ## Performance tuning and profiling
