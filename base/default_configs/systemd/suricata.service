@@ -2,7 +2,6 @@
 Description=Suricata IDS
 After=network.target
 Requires=network.target
-PartOf=dynamite-agent.target
 
 [Service]
 Type=forking
@@ -17,4 +16,4 @@ StandardOutput=syslog
 StandardError=syslog
 
 [Install]
-WantedBy=dynamite-agent.target
+WantedBy=multi-user.target

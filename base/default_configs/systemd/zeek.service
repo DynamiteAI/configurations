@@ -1,11 +1,9 @@
 [Unit]
 Description=Zeek Network Traffic Monitor
 After=network.target
-PartOf=dynamite-agent.target
 
 [Service]
 EnvironmentFile=/etc/dynamite/environment
-# Find the python2 binary
 Environment="PYTHON_BIN=/usr/bin/python3"
 ExecStartPre=/bin/bash -c "${PYTHON_BIN} ${ZEEK_HOME}/bin/zeekctl cleanup"
 ExecStartPre=/bin/bash -c "${PYTHON_BIN} ${ZEEK_HOME}/bin/zeekctl check"
@@ -20,4 +18,4 @@ StandardOutput=syslog
 StandardError=syslog
 
 [Install]
-WantedBy=dynamite-agent.target
+WantedBy=multi-user.target
