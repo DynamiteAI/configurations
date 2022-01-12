@@ -3,6 +3,8 @@ Description=Zeek Network Traffic Monitor
 After=network.target
 
 [Service]
+User=dynamite
+Group=dynamite
 EnvironmentFile=/etc/dynamite/environment
 Environment="PYTHON_BIN=/usr/bin/python3"
 ExecStartPre=/bin/bash -c "${PYTHON_BIN} ${ZEEK_HOME}/bin/zeekctl cleanup"
