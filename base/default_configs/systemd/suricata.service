@@ -8,7 +8,6 @@ User=dynamite
 Group=dynamite
 Type=forking
 EnvironmentFile=/etc/dynamite/environment
-PIDFile=/var/run/suricata.pid
 ExecStart=/bin/bash -c "${SURICATA_HOME}/bin/suricata -c ${SURICATA_CONFIG}/suricata.yaml --af-packet -D"
 ExecReload=/bin/kill -SIGHUP $MAINPID
 ExecStop=/bin/kill -SIGTERM $MAINPID
