@@ -226,14 +226,6 @@
       "detections"
     ]
   },
-  "ceac716": {
-    "friendly_name": "Alert On Country",
-    "description": "Geodata based detections for SSH analysis.",
-    "categories": [
-      "ssh",
-      "detections"
-    ]
-  },
   "9363b9a": {
     "friendly_name": "Detect Software",
     "description": "Extracts SSH client and server information from SSH connections and forwards it to the software framework.",
@@ -364,8 +356,8 @@
     ]
   },
   "b627a93": {
-    "friendly_name": "Detect Heartbleed Attack (CVE-2014-0160)",
-    "description": "Detect the TLS heartbleed attack.",
+    "friendly_name": "Detect Heartbleed Attack",
+    "description": "Detect the TLS Heartbleed (CVE-2014-0160) attack.",
     "categories": [
       "ssl",
       "detections",
@@ -404,15 +396,6 @@
     "description": "SQL injection attack detection over the HTTP protocol.",
     "categories": [
       "http",
-      "detections",
-      "notices"
-    ]
-  },
-  "3305298": {
-    "friendly_name": "Alert On Country",
-    "description": "Geographical based detections for SMTP originator countries.",
-    "categories": [
-      "smtp",
       "detections",
       "notices"
     ]
