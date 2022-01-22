@@ -176,7 +176,7 @@
       "detections"
     ]
   },
-  "4e3f49c": {
+  "80fbab7": {
     "friendly_name": "Add Community Id",
     "description": "Community Id allows for correlation across Suricata generated logs. If enabled, community_id will be added to connections and relevant protocol logs.",
     "categories": [
@@ -339,7 +339,7 @@
       "detections"
     ]
   },
-  "e3e5ed9": {
+  "20d7e67": {
     "friendly_name": "Detect Log4Shell Attack",
     "description": "Detect Log4Shell (CVE-2021-44228) attack over HTTP.",
     "categories": [

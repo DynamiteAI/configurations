@@ -83,4 +83,5 @@ def organize_definitions(definitions_fp: str):
 
 
 
-print(json.dumps(organize_definitions('/home/jamin/PycharmProjects/configurations/base/default_configs/zeek/zeek_script_definitions.json'), indent=2))
+for s in find_undefined_scripts():
+    print(s)
