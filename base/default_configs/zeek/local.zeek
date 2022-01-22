@@ -90,6 +90,12 @@
 # Notice Framework
 # @load policy/frameworks/notice/extend-email/hostnames
 
-@load packages
+# Packages
+@load packages/dynamite-community-id.git
+@load packages/cve-2021-44228.git
+@load packages/zeek-utils.git/pcr.zeek
+@load packages/zeek-utils.git/orientation.zeek
+@load packages/zeek-utils.git/dns_query_labels.zeek
+
 redef ignore_checksums = T;
 redef Stats::report_interval = 1 mins;
