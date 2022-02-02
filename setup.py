@@ -2,11 +2,10 @@ from setuptools import setup
 
 setup(
     name='dynamite-nsm-public-configurations',
-    version='1.0',
+    version='1.1',
     url='http://dynamite.ai',
     license='',
     author='Jamin Becker',
-    scripts='deploy-configs',
     author_email='jamin@dynamite.ai',
     install_requires=[
         'boto3',

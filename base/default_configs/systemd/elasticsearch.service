@@ -11,12 +11,10 @@ Environment=PID_DIR=/var/run/dynamite/
 Environment=ES_SD_NOTIFY=true
 EnvironmentFile=/etc/dynamite/environment
 
-WorkingDirectory=/opt/dynamite/elasticsearch
-
 User=dynamite
 Group=dynamite
 
-ExecStart=/opt/dynamite/elasticsearch/bin/elasticsearch -p ${PID_DIR}/elasticsearch.pid
+ExecStart=/bin/bash -c "${ES_HOME}/bin/elasticsearch -p ${PID_DIR}/elasticsearch.pid"
 
 StandardOutput=journal
 StandardError=inherit
