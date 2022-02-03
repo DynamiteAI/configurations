@@ -1,6 +1,6 @@
 [Unit]
 Description=Zeek Network Traffic Monitor
-After=network.target
+After=network-online.target
 
 [Service]
 User=dynamite

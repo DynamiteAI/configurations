@@ -1,5 +1,5 @@
 [CONSTANTS]
-VERSION=1.1.0
+VERSION=1.1.3
 ELASTICSEARCH_MIRRORS=/etc/dynamite/mirrors/elasticsearch
 FILE_BEAT_MIRRORS=/etc/dynamite/mirrors/filebeat
 LOGSTASH_MIRRORS=/etc/dynamite/mirrors/logstash

@@ -1,7 +1,7 @@
 [Unit]
 Description=Suricata IDS
-After=network.target
-Requires=network.target
+After=network-online.target
+Requires=network-online.target
 
 [Service]
 User=dynamite
