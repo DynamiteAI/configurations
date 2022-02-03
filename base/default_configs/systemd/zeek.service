@@ -1,12 +1,15 @@
 [Unit]
 Description=Zeek Network Traffic Monitor
-After=network.target
-PartOf=dynamite-agent.target
+After=network-online.target
 
 [Service]
+User=dynamite
+Group=dynamite
 EnvironmentFile=/etc/dynamite/environment
-# Find the python2 binary
-Environment="PYTHON_BIN=/usr/bin/python3"
+Environment="PYTHON_BIN=$(python3)"
+Environment="SETCAP_BIN=$(which setcap)"
+ExecStartPre=/bin/bash -c "sudo ${SETCAP_BIN} cap_net_raw=eip ${ZEEK_HOME}/bin/capstats"
+ExecStartPre=/bin/bash -c "sudo ${SETCAP_BIN} cap_net_raw=eip ${ZEEK_HOME}/bin/zeek"
 ExecStartPre=/bin/bash -c "${PYTHON_BIN} ${ZEEK_HOME}/bin/zeekctl cleanup"
 ExecStartPre=/bin/bash -c "${PYTHON_BIN} ${ZEEK_HOME}/bin/zeekctl check"
 ExecStartPre=/bin/bash -c "${PYTHON_BIN} ${ZEEK_HOME}/bin/zeekctl install"
@@ -20,4 +23,4 @@ StandardOutput=syslog
 StandardError=syslog
 
 [Install]
-WantedBy=dynamite-agent.target
+WantedBy=multi-user.target

@@ -1,16 +1,17 @@
 [Unit]
 Description=Suricata IDS
-After=network.target
-Requires=network.target
-PartOf=dynamite-agent.target
+After=network-online.target
+Requires=network-online.target
 
 [Service]
+User=dynamite
+Group=dynamite
 Type=forking
 EnvironmentFile=/etc/dynamite/environment
-Environment=SURI_PID=/var/run/dynamite/suricata.pid
-PIDFile=/var/run/dynamite/suricata.pid
-ExecStartPre=/bin/mkdir -p /var/run/dynamite/
-ExecStart=/bin/bash -c "${SURICATA_HOME}/bin/suricata -c ${SURICATA_CONFIG}/suricata.yaml --af-packet -D --pidfile ${SURI_PID}"
+Environment=SURI_PID=/var/run/suricata.pid
+Environment="SETCAP_BIN=$(which setcap)"
+ExecStartPre=/bin/bash -c "sudo ${SETCAP_BIN} cap_net_raw,cap_net_admin=eip ${SURICATA_HOME}/bin/suricata"
+ExecStart=/bin/bash -c "${SURICATA_HOME}/bin/suricata -c ${SURICATA_CONFIG}/suricata.yaml --af-packet -D"
 ExecReload=/bin/kill -SIGHUP $MAINPID
 ExecStop=/bin/kill -SIGTERM $MAINPID
 PrivateTmp=yes
@@ -18,4 +19,4 @@ StandardOutput=syslog
 StandardError=syslog
 
 [Install]
-WantedBy=dynamite-agent.target
+WantedBy=multi-user.target

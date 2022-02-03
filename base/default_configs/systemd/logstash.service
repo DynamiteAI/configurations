@@ -6,7 +6,7 @@ Restart=always
 User=dynamite
 Group=dynamite
 
-ExecStart=/opt/dynamite/logstash/bin/logstash --path.settings $LS_PATH_CONF
+ExecStart=/bin/bash -c "${LS_HOME}/bin/logstash --path.settings $LS_PATH_CONF"
 
 # Connects standard output to /dev/null
 

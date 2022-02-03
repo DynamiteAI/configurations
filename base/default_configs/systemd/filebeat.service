@@ -2,7 +2,6 @@
 Description=Filebeat Log Collector
 Wants=network-online.target
 After=network-online.target
-PartOf=dynamite-agent.target
 
 [Service]
 User=dynamite
@@ -15,4 +14,4 @@ StandardOutput=syslog
 StandardError=syslog
 
 [Install]
-WantedBy=dynamite-agent.target
+WantedBy=multi-user.target
