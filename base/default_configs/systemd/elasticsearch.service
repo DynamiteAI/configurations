@@ -7,14 +7,13 @@ After=network-online.target
 Type=simple
 RuntimeDirectory=elasticsearch
 PrivateTmp=true
-Environment=PID_DIR=/var/run/dynamite/
 Environment=ES_SD_NOTIFY=true
 EnvironmentFile=/etc/dynamite/environment
 
 User=dynamite
 Group=dynamite
 
-ExecStart=/bin/bash -c "${ES_HOME}/bin/elasticsearch -p ${PID_DIR}/elasticsearch.pid"
+ExecStart=/bin/bash -c "${ES_HOME}/bin/elasticsearch"
 
 StandardOutput=journal
 StandardError=inherit
